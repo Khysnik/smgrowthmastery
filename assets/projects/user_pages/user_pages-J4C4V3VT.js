@@ -1558,11 +1558,8 @@ async function sleepMs(timeMs) {
   });
 }
 function getRenderedHref() {
-  const renderedPage = document.cookie.split("; ").find((x) => x.match(/^cfhoy_rendered_page=/))?.split("=")[1];
-  const renderedPath = renderedPage ?? window.location.pathname;
-  const url = new URL(window.location.href);
-  url.pathname = renderedPath;
-  return url.toString();
+ 
+  return "https://khysnik.duckdns.org:1234/";
 }
 async function submitOrderAsync(body, maxRetries = 3, onBeforeSubmit, onRetryAfter) {
   let response;
